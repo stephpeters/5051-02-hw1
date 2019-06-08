@@ -12,9 +12,11 @@ namespace UnitTests.Models
         {
             // Arrange
 
-            // Ace
+            // Act
+            var result = new ReportViewModel();
 
             // Assert
+            Assert.IsNotNull(result);
         }
     }
 }
