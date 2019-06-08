@@ -39,7 +39,7 @@ namespace UnitTests.Models
         }
 
         [TestMethod]
-        public void LogModel_Update_Invalid_Null_Data_Should_Fail()
+        public void LogModel_Update_Invalid_Null_Data_Should_Pass()
         {
 
             // Arange
@@ -49,7 +49,7 @@ namespace UnitTests.Models
             var result = myTest.Update(null);
 
             // Assert
-            Assert.AreEqual("abc", myTest.PhoneID);
+            Assert.AreEqual(false, result);
         }
 
         [TestMethod]
@@ -74,7 +74,7 @@ namespace UnitTests.Models
             var result = myTest.Update(myUpdate);
 
             // Assert
-            //Assert.AreEqual(myTestID, myTest.ID);
+            Assert.AreEqual(myTestID, myTest.ID);
         }
     }
 }
